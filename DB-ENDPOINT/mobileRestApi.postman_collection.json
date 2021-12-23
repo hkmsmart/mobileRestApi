@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "69ab0424-d8cc-4e17-bc76-25602123096d",
+		"name": "mobileRestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mobilerestapi/api/register?email=a1234567@a.com&password=123&deviceId=1",
+					"protocol": "http",
+					"host": [
+						"mobilerestapi"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "a1234567@a.com"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						},
+						{
+							"key": "deviceId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"uid\": \"a\",\n    \"appId\": \"a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://mobilerestapi/api/login?email=a@a.com&password=123",
+					"protocol": "http",
+					"host": [
+						"mobilerestapi"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "a@a.com"
+						},
+						{
+							"key": "password",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9tb2JpbGVyZXN0YXBpXC9hcGlcL3JlZ2lzdGVyIiwiaWF0IjoxNjQwMjE5OTQ1LCJleHAiOjE2NDAyMjM1NDUsIm5iZiI6MTY0MDIxOTk0NSwianRpIjoiS3dNS25nYkZRR0Jxd0lGbiIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.geLaOavFXsnt7r9cjuFBdIebnXlD6Oxluxyf3pwoJ6I"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"receipt\": \"a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://mobilerestapi/api/purchase"
+			},
+			"response": []
+		},
+		{
+			"name": "check",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9tb2JpbGVyZXN0YXBpXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5OTUwMzA0LCJleHAiOjE2Mzk5NTM5MDQsIm5iZiI6MTYzOTk1MDMwNCwianRpIjoiVlZNczVnNTBqUW1PQ1NHZSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.z2foHRwsSU8Lp8wUXp0HImSGrVVLqhCtuBLZhPnP-s8"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"receipt\": \"a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://mobilerestapi/api/check"
+			},
+			"response": []
+		}
+	]
+}
